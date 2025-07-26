@@ -38,27 +38,41 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${fjallaOne.variable} ${bitter.variable} antialiased bg-navy text-white font-bitter`}
-      >
-        <header className="fixed top-0 w-full bg-navy/90 backdrop-blur-sm z-50 border-b border-navy-light">
-          <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-16">
-              <div className="flex items-center">
-                <Image src="/Logo.png" alt="EZEKSUNY Logo" width={120} height={40} className="object-contain h-8 w-auto" />
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Bitter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+      </head>
+      <body className={`${fjallaOne.variable} ${bitter.variable} font-bitter`}>
+        {/* Header */}
+        <header className="bg-navy shadow-sm sticky top-0 z-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center py-4">
+              <div className="flex items-center space-x-4">
+                <a href="https://g.co/kgs/t4Prcnv" target="_blank" rel="noopener noreferrer">
+                  <Image src="/Logo.png" alt="EZEKSUNY Logo" width={50} height={50} className="object-contain hover:opacity-80 transition-opacity cursor-pointer" />
+                </a>
+                <div>
+                  <span className="font-title text-xl font-bold text-white">EZEKSUNY</span>
+                  <div className="text-white text-sm">Tailoring and Cleaning</div>
+                </div>
               </div>
-              <div className="hidden md:flex items-center space-x-8">
-                <a href="#services" className="text-slate-300 hover:text-white transition-colors">Services</a>
-                <a href="#about" className="text-slate-300 hover:text-white transition-colors">About</a>
-                <a href="#contact" className="text-slate-300 hover:text-white transition-colors">Contact</a>
-                <a href="tel:6674350059" className="bg-white text-black px-6 py-2 rounded-full font-semibold hover:bg-slate-100 transition-all">
+              <nav className="hidden md:flex items-center space-x-8">
+                <a href="/" className="text-white hover:text-gold transition-colors font-medium">HOME</a>
+                <a href="/services" className="text-white hover:text-gold transition-colors font-medium">SERVICES</a>
+                <a href="/#about" className="text-white hover:text-gold transition-colors font-medium">ABOUT</a>
+                <a href="/#contact" className="text-white hover:text-gold transition-colors font-medium">CONTACT</a>
+              </nav>
+              <div className="flex items-center">
+                <a href="tel:6674350059" className="bg-white text-navy px-6 py-2 rounded-lg font-semibold hover:bg-gold transition-all duration-300 !text-black">
                   Give us a call
                 </a>
               </div>
             </div>
-          </nav>
+          </div>
         </header>
-        <main className="pt-16">
+
+        <main>
           {children}
         </main>
       </body>

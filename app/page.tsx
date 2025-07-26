@@ -8,173 +8,117 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-navy/50 to-transparent"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Image - Replace with your professional suit image */}
+        <div className="absolute inset-0 bg-gradient-to-r from-navy/90 to-navy/70">
+          <div className="absolute inset-0 bg-black/30"></div>
+        </div>
+        
+        {/* Hero Content */}
+        <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
           <div className="flex justify-center mb-8">
-            <Image src="/Logo.png" alt="EZEKSUNY Logo" width={180} height={180} className="object-contain rounded-xl bg-white p-4" />
+            <a href="https://g.co/kgs/t4Prcnv" target="_blank" rel="noopener noreferrer">
+              <div className="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer">
+                <Image src="/Logo.png" alt="EZEKSUNY Logo" width={200} height={200} className="object-contain" />
+              </div>
+            </a>
           </div>
           <h1 className="font-title text-5xl md:text-7xl font-bold mb-6">
-            <span className="gradient-text">EZEKSUNY</span>
+            <span className="text-gold">EZEKSUNY</span>
             <br />
-            <span className="text-white">Tailoring & Cleaning</span>
+            <span className="text-white">Tailoring & Cleaning </span>
           </h1>
-          <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Professional tailoring, cleaning, and alteration services in Baltimore, MD. 
-            Quality craftsmanship meets convenience.
+          <p className="text-xl md:text-2xl text-gray-200 mb-12 max-w-2xl mx-auto">
+            Expert alterations, tailoring, and premium dry cleaning services in Baltimore, MD
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:6674350059" className="bg-white !text-black px-8 py-4 rounded-full font-semibold text-lg hover:bg-slate-100 transition-all text-center">
-              Give us a call
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <a href="/services" className="border-2 border-gold text-white px-8 py-4 text-lg font-semibold hover:bg-gold hover:text-navy transition-all duration-300">
+              VIEW SERVICES
             </a>
-            <button className="bg-white !text-black px-8 py-3 rounded-full font-semibold hover:bg-slate-100 transition-all">
-              View Services
-            </button>
+            <a href="tel:6674350059" className="border-2 border-gold text-white px-8 py-4 text-lg font-semibold hover:bg-gold hover:text-navy transition-all duration-300">
+              INQUIRE TODAY!
+            </a>
           </div>
+        </div>
+
+        {/* Pagination Dots */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3">
+          <div className="w-3 h-3 bg-gold rounded-full"></div>
+          <div className="w-3 h-3 bg-white/50 rounded-full"></div>
+          <div className="w-3 h-3 bg-white/50 rounded-full"></div>
         </div>
       </section>
 
-      {/* Infinite Carousel Section */}
-      <GalleryCarousel />
+      {/* Gallery Carousel */}
+      <section id="gallery" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-title text-4xl font-bold text-center mb-16 text-black">
+            OUR WORK
+          </h2>
+          <GalleryCarousel />
+        </div>
+      </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-navy-light">
+      <section className="py-20 bg-navy">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-title text-4xl font-bold text-center mb-16">
-            <span className="gradient-text">THE EZEKSUNY PROCESS</span>
+          <h2 className="font-title text-4xl font-bold text-center mb-16 text-white">
+            THE EZEKSUNY PROCESS
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-white text-navy rounded-full flex items-center justify-center mx-auto mb-4 text-3xl font-bold border-4 border-navy shadow-lg">
+            <div className="text-center group">
+              <div className="w-20 h-20 bg-white text-navy rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold group-hover:bg-gold transition-all duration-300">
                 <span role="img" aria-label="calendar">📅</span>
               </div>
-              <h3 className="font-title text-xl font-semibold mb-2">BOOK</h3>
+              <h3 className="font-title text-xl font-semibold mb-4 text-white">BOOK</h3>
               <p className="text-blue-100">Choose your service and schedule an appointment for a fitting.</p>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-white text-navy rounded-full flex items-center justify-center mx-auto mb-4 text-3xl font-bold border-4 border-navy shadow-lg">
+            <div className="text-center group">
+              <div className="w-20 h-20 bg-white text-navy rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold group-hover:bg-gold transition-all duration-300">
                 <span role="img" aria-label="ruler">📏</span>
               </div>
-              <h3 className="font-title text-xl font-semibold mb-2">MEASURE</h3>
+              <h3 className="font-title text-xl font-semibold mb-4 text-white">MEASURE</h3>
               <p className="text-blue-100">We take precise measurements of your garment(s) for the perfect fit.</p>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-white text-navy rounded-full flex items-center justify-center mx-auto mb-4 text-3xl font-bold border-4 border-navy shadow-lg">
+            <div className="text-center group">
+              <div className="w-20 h-20 bg-white text-navy rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold group-hover:bg-gold transition-all duration-300">
                 <span role="img" aria-label="needle">🧵</span>
               </div>
-              <h3 className="font-title text-xl font-semibold mb-2">TAILOR</h3>
+              <h3 className="font-title text-xl font-semibold mb-4 text-white">TAILOR</h3>
               <p className="text-blue-100">Expert craftsmanship to perfect your garments with precision.</p>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-white text-navy rounded-full flex items-center justify-center mx-auto mb-4 text-3xl font-bold border-4 border-navy shadow-lg">
+            <div className="text-center group">
+              <div className="w-20 h-20 bg-white text-navy rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold group-hover:bg-gold transition-all duration-300">
                 <span role="img" aria-label="delivery">📦</span>
               </div>
-              <h3 className="font-title text-xl font-semibold mb-2">DELIVER</h3>
+              <h3 className="font-title text-xl font-semibold mb-4 text-white">DELIVER</h3>
               <p className="text-blue-100">Your perfectly tailored garments delivered on time, every time.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="py-20 bg-navy">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-title text-4xl font-bold text-center mb-16">
-            <span className="gradient-text">TAILORING SERVICES</span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-navy-light rounded-xl p-8 card-hover">
-              <div className="w-12 h-12 bg-white text-navy rounded-lg flex items-center justify-center mb-4">
-                <span className="font-bold">👔</span>
-              </div>
-              <h3 className="font-title text-xl font-semibold mb-4">ALTERATIONS</h3>
-              <ul className="text-blue-100 space-y-2">
-                <li>• Uniform tailoring (school, military, work)</li>
-                <li>• Pant & skirt alterations</li>
-                <li>• Zipper & button repair</li>
-                <li>• Same-day alterations</li>
-              </ul>
-            </div>
-            <div className="bg-navy-light rounded-xl p-8 card-hover">
-              <div className="w-12 h-12 bg-white text-navy rounded-lg flex items-center justify-center mb-4">
-                <span className="font-bold">🎩</span>
-              </div>
-              <h3 className="font-title text-xl font-semibold mb-4">CUSTOM SUITS</h3>
-              <ul className="text-blue-100 space-y-2">
-                <li>• Custom suit tailoring (men & women)</li>
-                <li>• Business attire</li>
-                <li>• Formal wear</li>
-                <li>• Prom & special occasions</li>
-              </ul>
-            </div>
-            <div className="bg-navy-light rounded-xl p-8 card-hover">
-              <div className="w-12 h-12 bg-white text-navy rounded-lg flex items-center justify-center mb-4">
-                <span className="font-bold">👰</span>
-              </div>
-              <h3 className="font-title text-xl font-semibold mb-4">WEDDING</h3>
-              <ul className="text-blue-100 space-y-2">
-                <li>• Bridal dress alterations</li>
-                <li>• Bridesmaid dress alterations</li>
-                <li>• Wedding dress cleaning</li>
-                <li>• Preservation services</li>
-              </ul>
-            </div>
-            <div className="bg-navy-light rounded-xl p-8 card-hover">
-              <div className="w-12 h-12 bg-white text-navy rounded-lg flex items-center justify-center mb-4">
-                <span className="font-bold">🧵</span>
-              </div>
-              <h3 className="font-title text-xl font-semibold mb-4">CUSTOM DESIGN</h3>
-              <ul className="text-blue-100 space-y-2">
-                <li>• Custom clothing design</li>
-                <li>• Patchwork & mending</li>
-                <li>• Creative alterations</li>
-                <li>• Bespoke garments</li>
-              </ul>
-            </div>
-            <div className="bg-navy-light rounded-xl p-8 card-hover">
-              <div className="w-12 h-12 bg-white text-navy rounded-lg flex items-center justify-center mb-4">
-                <span className="font-bold">🧼</span>
-              </div>
-              <h3 className="font-title text-xl font-semibold mb-4">DRY CLEANING</h3>
-              <ul className="text-blue-100 space-y-2">
-                <li>• Gentle cleaning for delicate garments</li>
-                <li>• Stain removal</li>
-                <li>• High-end garment care</li>
-                <li>• Wedding dress preservation</li>
-              </ul>
-            </div>
-            <div className="bg-navy-light rounded-xl p-8 card-hover">
-              <div className="w-12 h-12 bg-white text-navy rounded-lg flex items-center justify-center mb-4">
-                <span className="font-bold">⚡</span>
-              </div>
-              <h3 className="font-title text-xl font-semibold mb-4">EXPRESS SERVICE</h3>
-              <ul className="text-blue-100 space-y-2">
-                <li>• Same-day alterations</li>
-                <li>• Rush orders</li>
-                <li>• Emergency repairs</li>
-                <li>• Quick turnaround</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Testimonials Section */}
-      <section className="py-20 bg-navy-light">
+      <section className="py-20 bg-navy">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-title text-4xl font-bold text-center mb-16">
-            <span className="gradient-text">CUSTOMER TESTIMONIALS</span>
+          <h2 className="font-title text-4xl font-bold text-center mb-6 text-white">
+            CUSTOMER TESTIMONIALS
           </h2>
+          <div className="text-center mb-16">
+            <a href="https://g.co/kgs/t4Prcnv" target="_blank" rel="noopener noreferrer" className="bg-gold text-navy px-6 py-2 rounded-lg font-semibold hover:bg-white transition-all duration-300 inline-block border-2 border-white">
+              View more
+            </a>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-navy rounded-xl p-8 card-hover">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-white text-navy rounded-full flex items-center justify-center mr-4">
+            <div className="bg-navy-light rounded-lg p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-gold text-navy rounded-full flex items-center justify-center mr-4">
                   <span className="font-bold">J</span>
                 </div>
                 <div>
-                  <h4 className="font-semibold">Jeremi Duell</h4>
+                  <h4 className="font-semibold text-white">Jeremi Duell</h4>
                   <div className="flex items-center gap-2 mb-1">
-                    <div className="flex text-yellow-400">
+                    <div className="flex text-gold">
                       <span>★★★★★</span>
                     </div>
                     <span className="text-blue-100 text-sm">5 stars</span>
@@ -182,17 +126,17 @@ export default function Home() {
                   <p className="text-blue-100 text-sm">July 3rd, 2025</p>
                 </div>
               </div>
-              <p className="text-blue-50 italic">"Just moved to Baltimore and found this Tailor on google. Super fast dry clean just in time for my concert. I highly recommend because the service was quick and top notch"</p>
+              <p className="text-white italic">"Just moved to Baltimore and found this Tailor on google. Super fast dry clean just in time for my concert. I highly recommend because the service was quick and top notch"</p>
             </div>
-            <div className="bg-navy rounded-xl p-8 card-hover">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-white text-navy rounded-full flex items-center justify-center mr-4">
+            <div className="bg-navy-light rounded-lg p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-gold text-navy rounded-full flex items-center justify-center mr-4">
                   <span className="font-bold">J</span>
                 </div>
                 <div>
-                  <h4 className="font-semibold">Jimya Owens</h4>
+                  <h4 className="font-semibold text-white">Jimya Owens</h4>
                   <div className="flex items-center gap-2 mb-1">
-                    <div className="flex text-yellow-400">
+                    <div className="flex text-gold">
                       <span>★★★★★</span>
                     </div>
                     <span className="text-blue-100 text-sm">5 stars</span>
@@ -200,17 +144,17 @@ export default function Home() {
                   <p className="text-blue-100 text-sm">July 2nd, 2025</p>
                 </div>
               </div>
-              <p className="text-blue-50 italic">"Impeccable job!! Needed an old dress opened up for the Beyonce concert. Added a piece and made perfect second revisions. 100/10"</p>
+              <p className="text-white italic">"Impeccable job!! Needed an old dress opened up for the Beyonce concert. Added a piece and made perfect second revisions. 100/10"</p>
             </div>
-            <div className="bg-navy rounded-xl p-8 card-hover">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-white text-navy rounded-full flex items-center justify-center mr-4">
+            <div className="bg-navy-light rounded-lg p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-gold text-navy rounded-full flex items-center justify-center mr-4">
                   <span className="font-bold">J</span>
                 </div>
                 <div>
-                  <h4 className="font-semibold">Jean Seaborn</h4>
+                  <h4 className="font-semibold text-white">Jean Seaborn</h4>
                   <div className="flex items-center gap-2 mb-1">
-                    <div className="flex text-yellow-400">
+                    <div className="flex text-gold">
                       <span>★★★★★</span>
                     </div>
                     <span className="text-blue-100 text-sm">5 stars</span>
@@ -218,74 +162,77 @@ export default function Home() {
                   <p className="text-blue-100 text-sm">June 16th, 2025</p>
                 </div>
               </div>
-              <p className="text-blue-50 italic">"Words can't explain the work that EZ owner does. He will transform any article of clothing into your very own."</p>
+              <p className="text-white italic">"Words can't explain the work that EZ owner does. He will transform any article of clothing into your very own."</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-navy">
+      <section id="about" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="font-title text-4xl font-bold mb-6">
-                <span className="gradient-text">MEET EZEKSUNY</span>
+              <h2 className="font-title text-4xl font-bold mb-6 text-navy">
+                MEET EZEKSUNY
               </h2>
-              <p className="text-xl text-blue-100 mb-6">
+              <h3 className="font-title text-2xl font-semibold mb-4 text-black">
+                About Me
+              </h3>
+              <p className="text-xl text-gray-600 mb-6">
                 Hi, I'm the founder of EZEKSUNY Tailoring & Cleaning. With 24 years of experience in the industry, 
                 I'm passionate about bringing exceptional service to Baltimore.
               </p>
-              <p className="text-blue-100 mb-8">
-              From flawless alterations to eco-friendly dry cleaning, we deliver! You can count on us for quality, convenience, and a perfect fit
-              Look sharp. Feel confident. Choose EZEKSUNY.
+              <p className="text-gray-600 mb-8">
+                From flawless alterations to eco-friendly dry cleaning, we deliver! You can count on us for quality, convenience, and a perfect fit.
+                Look sharp. Feel confident. Choose EZEKSUNY.
               </p>
-              <button className="bg-white !text-black px-8 py-3 rounded-full font-semibold hover:bg-slate-100 transition-all">
-                Learn More
-              </button>
+              <a href="tel:6674350059" className="bg-navy text-white px-8 py-4 rounded-lg font-semibold hover:bg-gold transition-all duration-300 inline-block">
+                Book a Fitting
+              </a>
             </div>
             <div className="flex justify-center">
-              <Image src="/Logo.png" alt="EZEKSUNY Logo" width={320} height={320} className="rounded-full object-contain w-80 h-80 bg-white p-8" />
+              <Image src="/Logo.png" alt="EZEKSUNY Logo" width={400} height={400} className="rounded-lg object-contain w-96 h-96 bg-gray-50 p-8 shadow-lg" />
             </div>
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-navy-light">
+      <section id="contact" className="py-20 bg-navy">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-title text-4xl font-bold text-center mb-16">
-            <span className="gradient-text">GET THE EZEKSUNY FIT</span>
+          <h2 className="font-title text-4xl font-bold text-center mb-16 text-white">
+            GET THE EZEKSUNY FIT
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h3 className="font-title text-2xl font-semibold mb-6">Contact Information</h3>
-              <div className="space-y-4">
+              <h3 className="font-title text-2xl font-semibold mb-8 text-white">Contact Information</h3>
+              <div className="space-y-6">
                 <div className="flex items-center">
-                  <div className="w-8 h-8 bg-white text-black rounded-full flex items-center justify-center mr-4">
-                    <span className="text-sm">📍</span>
+                  <div className="w-12 h-12 bg-gold text-navy rounded-full flex items-center justify-center mr-6">
+                    <span className="text-xl">📍</span>
                   </div>
                   <div>
-                    <p className="font-semibold">Address</p>
-                    <p className="text-blue-100">5910 York Rd, Baltimore, MD 21212</p>
+                    <p className="font-semibold text-white">Address</p>
+                    <p className="text-gray-300">5910 York Rd, Baltimore, MD 21212</p>
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-8 h-8 bg-white text-black rounded-full flex items-center justify-center mr-4">
-                    <span className="text-sm">📞</span>
+                  <div className="w-12 h-12 bg-gold text-navy rounded-full flex items-center justify-center mr-6">
+                    <span className="text-xl">📞</span>
                   </div>
                   <div>
-                    <p className="font-semibold">Phone</p>
-                    <p className="text-blue-100">(667) 435-0059</p>
+                    <p className="font-semibold text-white">Phone</p>
+                    <p className="text-gray-300">(667) 435-0059</p>
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-8 h-8 bg-white text-black rounded-full flex items-center justify-center mr-4">
-                    <span className="text-sm">🕒</span>
+                  <div className="w-12 h-12 bg-gold text-navy rounded-full flex items-center justify-center mr-6">
+                    <span className="text-xl">🕒</span>
                   </div>
                   <div>
-                    <p className="font-semibold">Hours</p>
-                    <div className="text-blue-100">
+                    <p className="font-semibold text-white">Hours</p>
+                    <div className="text-gray-300">
                       <p>Monday–Friday: 8 AM–7 PM</p>
                       <p>Saturday: 8 AM–6 PM</p>
                       <p>Sunday: Closed</p>
@@ -295,7 +242,7 @@ export default function Home() {
               </div>
             </div>
             <div className="flex justify-center">
-              <div className="w-full h-64 rounded-xl overflow-hidden shadow-lg">
+              <div className="w-full h-80 rounded-lg overflow-hidden shadow-lg">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d764.7331570765934!2d-76.61113367359302!3d39.36397178480326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c80563880e5377%3A0xee432f5a881495c6!2s5910%20York%20Rd%2C%20Baltimore%2C%20MD%2021212!5e0!3m2!1sen!2sus!4v1751919349038!5m2!1sen!2sus"
                   width="100%"
@@ -310,7 +257,7 @@ export default function Home() {
             </div>
           </div>
           <div className="text-center mt-12">
-            <a href="tel:6674350059" className="bg-white !text-black px-12 py-4 rounded-full font-semibold text-lg hover:bg-slate-100 transition-all inline-block">
+            <a href="tel:6674350059" className="bg-gold text-navy px-12 py-4 rounded-lg font-semibold text-lg hover:bg-white transition-all duration-300 inline-block">
               Give us a call
             </a>
           </div>
@@ -336,17 +283,17 @@ function GalleryCarousel() {
     if (!emblaApi) return;
     const interval = setInterval(() => {
       if (emblaApi) emblaApi.scrollNext();
-    }, 2000);
+    }, 3000);
     return () => clearInterval(interval);
   }, [emblaApi]);
 
   return (
-    <div className="embla bg-navy py-8 max-w-6xl mx-auto overflow-hidden">
+    <div className="embla overflow-hidden">
       <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container flex gap-4">
+        <div className="embla__container flex gap-6">
           {galleryImages.map((img, idx) => (
-            <div className="embla__slide min-w-[320px] max-w-[340px] h-[400px] rounded-xl overflow-hidden shadow-lg flex items-center justify-center bg-navy" key={img}>
-              <Image src={`/images/${img}`} alt={`Gallery image ${idx + 1}`} width={340} height={400} className="object-cover w-full h-full" />
+            <div className="embla__slide min-w-[300px] max-w-[350px] h-[400px] rounded-lg overflow-hidden shadow-lg" key={img}>
+              <Image src={`/images/${img}`} alt={`Gallery image ${idx + 1}`} width={350} height={400} className="object-cover w-full h-full" />
             </div>
           ))}
         </div>
