@@ -31,11 +31,11 @@ export const metadata: Metadata = {
   description: "Professional tailoring, cleaning, and alteration services in Baltimore, MD.",
   icons: {
     icon: [
-      { url: '/Logo.png', sizes: '32x32', type: 'image/png' },
-      { url: '/Logo.png', sizes: '16x16', type: 'image/png' },
+      { url: '/Logo-optimized.webp', sizes: '32x32', type: 'image/webp' },
+      { url: '/Logo-optimized.webp', sizes: '16x16', type: 'image/webp' },
     ],
-    shortcut: '/Logo.png',
-    apple: '/Logo.png',
+    shortcut: '/Logo-optimized.webp',
+    apple: '/Logo-optimized.webp',
   },
 };
 
@@ -50,11 +50,9 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Bitter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-        <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/Logo.png?v=2" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/Logo.png?v=2" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/Logo.png?v=2" />
-        <link rel="shortcut icon" href="/favicon.ico?v=2" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/Logo-optimized.webp" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/Logo-optimized.webp" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/Logo-optimized.webp" />
         <link rel="manifest" href="/manifest.json" />
       </head>
       <body className={`${fjallaOne.variable} ${bitter.variable} font-bitter`}>
@@ -64,7 +62,7 @@ export default function RootLayout({
             <div className="flex justify-between items-center py-4">
               <div className="flex items-center space-x-4">
                 <a href="https://g.co/kgs/t4Prcnv" target="_blank" rel="noopener noreferrer">
-                  <Image src="/Logo.png" alt="EZEKSUNY Logo" width={50} height={50} className="object-contain hover:opacity-80 transition-opacity cursor-pointer" />
+                  <Image src="/Logo-optimized.webp" alt="EZEKSUNY Logo" width={50} height={50} className="object-contain hover:opacity-80 transition-opacity cursor-pointer" />
                 </a>
                 <div>
                   <span className="font-title text-xl font-bold text-white drop-shadow-[0_2px_2px_rgba(0,0,0,1)]">EZEKSUNY</span>

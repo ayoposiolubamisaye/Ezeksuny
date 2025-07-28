@@ -22,8 +22,7 @@ export default function Home() {
             preload="metadata"
             className="w-full h-full object-cover"
           >
-            <source src="/video/0728(2).mp4" type="video/quicktime" />
-            <source src="/video/0728(2).mp4" type="video/mp4" />
+            <source src="/video/0728(2)-compressed.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           {/* Overlay for better text readability */}
@@ -35,7 +34,7 @@ export default function Home() {
           <div className="flex justify-center mb-8">
             <a href="https://g.co/kgs/t4Prcnv" target="_blank" rel="noopener noreferrer">
               <div className="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer">
-                <Image src="/Logo.png" alt="EZEKSUNY Logo" width={200} height={200} className="object-contain" priority />
+                <Image src="/Logo-optimized.webp" alt="EZEKSUNY Logo" width={200} height={200} className="object-contain" priority />
               </div>
             </a>
           </div>
@@ -208,7 +207,7 @@ export default function Home() {
               </a>
             </div>
             <div className="flex justify-center">
-              <Image src="/Logo.png" alt="EZEKSUNY Logo" width={400} height={400} className="rounded-lg object-contain w-96 h-96 bg-gray-50 p-8 shadow-lg" />
+              <Image src="/Logo-optimized.webp" alt="EZEKSUNY Logo" width={400} height={400} className="rounded-lg object-contain w-96 h-96 bg-gray-50 p-8 shadow-lg" />
             </div>
           </div>
         </div>
@@ -284,12 +283,12 @@ export default function Home() {
 }
 
 const galleryImages = [
-  "509214291_694988946841955_4069598489533501815_n.jpg",
-  "494683656_662116726795844_9139364769200123003_n (1).jpg",
-  "491999281_644718968535620_1066741744683429412_n.jpg",
-  "486405999_629866096687574_1141180367610689799_n.jpg",
-  "480562182_619554704385380_6443033243955459859_n.jpg",
-  "473793529_575562372117947_432943533574415590_n.jpg",
+  "509214291_694988946841955_4069598489533501815_n.webp",
+  "494683656_662116726795844_9139364769200123003_n (1).webp",
+  "491999281_644718968535620_1066741744683429412_n.webp",
+  "486405999_629866096687574_1141180367610689799_n.webp",
+  "480562182_619554704385380_6443033243955459859_n.webp",
+  "473793529_575562372117947_432943533574415590_n.webp",
 ];
 
 function GalleryCarousel() {
