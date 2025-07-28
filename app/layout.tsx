@@ -67,7 +67,7 @@ export default function RootLayout({
                 </a>
                 <div>
                   <span className="font-title text-xl font-bold text-white drop-shadow-[0_2px_2px_rgba(0,0,0,1)]">EZEKSUNY</span>
-                  <div className="text-white text-sm drop-shadow-[0_2px_2px_rgba(0,0,0,1)]">Tailoring and Cleaners</div>
+                  <div className="text-white text-sm drop-shadow-[0_2px_2px_rgba(0,0,0,1)]">Tailoring and Cleaners LLC</div>
                 </div>
               </div>
               <nav className="hidden md:flex items-center space-x-8">

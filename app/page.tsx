@@ -41,7 +41,7 @@ export default function Home() {
           <h1 className="font-title text-5xl md:text-7xl font-bold mb-6">
             <span className="text-gold drop-shadow-[0_2px_2px_rgba(0,0,0,1)]">EZEKSUNY</span>
             <br />
-            <span className="text-white drop-shadow-[0_2px_2px_rgba(0,0,0,1)]">Tailoring & Cleaners </span>
+            <span className="text-white drop-shadow-[0_2px_2px_rgba(0,0,0,1)]">Tailoring & Cleaners LLC</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 mb-12 max-w-2xl mx-auto drop-shadow-[0_2px_2px_rgba(0,0,0,1)]">
             Expert alterations, tailoring, and premium dry cleaning services in Baltimore, MD
@@ -200,7 +200,7 @@ export default function Home() {
                 About Me
               </h3>
               <p className="text-xl text-gray-600 mb-6">
-                Hi, I'm the founder of EZEKSUNY Tailoring & Cleaning. With 24 years of experience in the industry, 
+                Hi, I'm the founder of EZEKSUNY Tailoring & Cleaners LLC. With 24 years of experience in the industry, 
                 I'm passionate about bringing exceptional service to Baltimore.
               </p>
               <p className="text-gray-600 mb-8">
@@ -212,7 +212,7 @@ export default function Home() {
               </a>
             </div>
             <div className="flex justify-center">
-              <Image src="/Logo-optimized.webp" alt="EZEKSUNY Logo" width={400} height={400} className="rounded-lg object-contain w-96 h-96 bg-gray-50 p-8 shadow-lg" />
+              <Image src="/aboutpic-original.webp" alt="About EZEKSUNY" width={400} height={500} className="rounded-lg object-cover w-80 h-96 shadow-lg" />
             </div>
           </div>
         </div>
