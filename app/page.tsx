@@ -10,7 +10,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Video Background */}
-        <div className="absolute inset-0 w-full h-full">
+        <div className="absolute inset-0 w-full h-full z-0">
           {/* Fallback background */}
           <div className="absolute inset-0 bg-gradient-to-r from-navy/90 to-navy/70"></div>
           
@@ -20,7 +20,7 @@ export default function Home() {
             muted
             playsInline
             preload="auto"
-            className="w-full h-full object-cover relative z-10"
+            className="w-full h-full object-cover"
             onError={(e) => console.error('Video error:', e)}
             onLoadStart={() => console.log('Video loading started')}
             onCanPlay={() => console.log('Video can play')}
@@ -30,11 +30,11 @@ export default function Home() {
             Your browser does not support the video tag.
           </video>
           {/* Overlay for better text readability */}
-          <div className="absolute inset-0 bg-navy/40 z-20"></div>
+          <div className="absolute inset-0 bg-navy/40"></div>
         </div>
         
         {/* Hero Content */}
-        <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
+        <div className="relative z-50 text-center text-white max-w-4xl mx-auto px-4">
           <div className="flex justify-center mb-8">
             <a href="https://g.co/kgs/t4Prcnv" target="_blank" rel="noopener noreferrer">
               <div className="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer">
@@ -51,12 +51,12 @@ export default function Home() {
             Expert alterations, tailoring, and premium dry cleaning services in Baltimore, MD
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <a href="/services" className="border-2 border-gold text-white px-8 py-4 text-lg font-semibold hover:bg-gold hover:text-navy transition-all duration-300 drop-shadow-[0_2px_2px_rgba(0,0,0,1)]">
+            <button onClick={() => window.location.href = '/services'} className="border-2 border-gold text-white px-8 py-4 text-lg font-semibold hover:bg-gold hover:text-navy transition-all duration-300 drop-shadow-[0_2px_2px_rgba(0,0,0,1)] cursor-pointer bg-navy/80 backdrop-blur-sm">
               VIEW SERVICES
-            </a>
-            <a href="tel:6674350059" className="border-2 border-gold text-white px-8 py-4 text-lg font-semibold hover:bg-gold hover:text-navy transition-all duration-300 drop-shadow-[0_2px_2px_rgba(0,0,0,1)]">
+            </button>
+            <button onClick={() => window.location.href = 'tel:6674350059'} className="border-2 border-gold text-white px-8 py-4 text-lg font-semibold hover:bg-gold hover:text-navy transition-all duration-300 drop-shadow-[0_2px_2px_rgba(0,0,0,1)] cursor-pointer bg-navy/80 backdrop-blur-sm">
               GIVE US A CALL
-            </a>
+            </button>
           </div>
         </div>
 
