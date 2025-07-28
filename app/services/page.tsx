@@ -217,7 +217,7 @@ const galleryImages = [
 ];
 
 const galleryImages4 = [
-  "z7.jpg",
+  "z7.webp",
   "%28Upload-from-mobile-1743171272%291000004220.jpg_1.webp",
   "%28Upload-from-mobile-1743175183%291000004218.jpg_1.webp",
   "%28Upload-from-mobile-1743175284%291000004222.jpg_3.webp",
