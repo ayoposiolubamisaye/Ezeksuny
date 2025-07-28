@@ -232,7 +232,7 @@ function GalleryCarousel() {
         <div className="embla__container flex gap-4">
           {galleryImages.map((img, idx) => (
             <div className="embla__slide min-w-[200px] max-w-[250px] h-[250px] rounded-lg overflow-hidden shadow-lg" key={`${img}-${idx}`}>
-              <Image src={`/images2/${img}`} alt={`Gallery image ${idx + 1}`} width={250} height={250} className="object-cover w-full h-full" />
+              <Image src={`/images2/${img}`} alt={`Gallery image ${idx + 1}`} width={250} height={250} className="object-cover w-full h-full" loading="lazy" />
             </div>
           ))}
         </div>

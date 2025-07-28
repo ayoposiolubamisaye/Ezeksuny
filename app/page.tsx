@@ -19,11 +19,8 @@ export default function Home() {
             loop
             muted
             playsInline
-            preload="auto"
+            preload="metadata"
             className="w-full h-full object-cover"
-            onError={(e) => console.error('Video error:', e)}
-            onLoadStart={() => console.log('Video loading started')}
-            onCanPlay={() => console.log('Video can play')}
           >
             <source src="/video/0728(2).mp4" type="video/quicktime" />
             <source src="/video/0728(2).mp4" type="video/mp4" />
@@ -38,7 +35,7 @@ export default function Home() {
           <div className="flex justify-center mb-8">
             <a href="https://g.co/kgs/t4Prcnv" target="_blank" rel="noopener noreferrer">
               <div className="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer">
-                <Image src="/Logo.png" alt="EZEKSUNY Logo" width={200} height={200} className="object-contain" />
+                <Image src="/Logo.png" alt="EZEKSUNY Logo" width={200} height={200} className="object-contain" priority />
               </div>
             </a>
           </div>
@@ -312,7 +309,7 @@ function GalleryCarousel() {
         <div className="embla__container flex gap-6">
           {galleryImages.map((img, idx) => (
             <div className="embla__slide min-w-[300px] max-w-[350px] h-[400px] rounded-lg overflow-hidden shadow-lg" key={img}>
-              <Image src={`/images/${img}`} alt={`Gallery image ${idx + 1}`} width={350} height={400} className="object-cover w-full h-full" />
+              <Image src={`/images/${img}`} alt={`Gallery image ${idx + 1}`} width={350} height={400} className="object-cover w-full h-full" loading="lazy" />
             </div>
           ))}
         </div>
