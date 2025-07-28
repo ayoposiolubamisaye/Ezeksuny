@@ -297,7 +297,6 @@ const galleryImages = [
 ];
 
 const galleryImages3 = [
-  "z7-compressed.webp",
   "z4-compressed.webp",
   "(Upload-from-mobile-1743087522)1000004224-compressed.webp",
   "(Upload-from-mobile-1743171272)1000004220-compressed.webp",

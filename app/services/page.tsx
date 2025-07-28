@@ -173,7 +173,28 @@ export default function Services() {
         </div>
       </section>
 
-
+      {/* Gallery Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="font-title text-3xl font-bold text-black mb-4">
+              From Wedding Dresses to Special Occasions, We've Got You Covered
+            </h2>
+          </div>
+          <div className="flex justify-center">
+            <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+              <Image 
+                src="/images4/z7.webp" 
+                alt="Gallery image" 
+                width={300} 
+                height={200} 
+                className="object-cover" 
+                loading="lazy" 
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Call to Action */}
       <section className="py-20 bg-navy">
@@ -217,8 +238,8 @@ const galleryImages = [
 ];
 
 const galleryImages4 = [
-  "z7.webp",
   "%28Upload-from-mobile-1743171272%291000004220.jpg_1.webp",
+  "z7.webp",
   "%28Upload-from-mobile-1743175183%291000004218.jpg_1.webp",
   "%28Upload-from-mobile-1743175284%291000004222.jpg_3.webp",
   "%28Upload-from-mobile-1743175465%291000004216.jpg_6.webp",
