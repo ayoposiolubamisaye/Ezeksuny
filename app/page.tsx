@@ -41,7 +41,7 @@ export default function Home() {
           <h1 className="font-title text-5xl md:text-7xl font-bold mb-6">
             <span className="text-gold drop-shadow-[0_2px_2px_rgba(0,0,0,1)]">EZEKSUNY</span>
             <br />
-            <span className="text-white drop-shadow-[0_2px_2px_rgba(0,0,0,1)]">Tailoring & Cleaning </span>
+            <span className="text-white drop-shadow-[0_2px_2px_rgba(0,0,0,1)]">Tailoring & Cleaners </span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 mb-12 max-w-2xl mx-auto drop-shadow-[0_2px_2px_rgba(0,0,0,1)]">
             Expert alterations, tailoring, and premium dry cleaning services in Baltimore, MD
