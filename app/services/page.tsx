@@ -13,12 +13,29 @@ export default function Services() {
 
   const services = [
     {
-      title: "ALTERATIONS",
+      title: "MEN'S ALTERATIONS",
       icon: "👔",
-      description: "Professional alterations for all types of garments with precision fitting.",
+      description: "Professional alterations for men with precision fitting.",
       features: [
-        "Uniform tailoring (school, military, work)",
-        "Pant & skirt alterations",
+        "Pants alterations (hemming, waist, length)",
+        "Suit alterations (jackets, trousers, sleeves)",
+        "Shirt alterations (sleeves, waist, length)",
+        "Jacket alterations (sleeves, shoulders, length)",
+        "Tie alterations and repairs",
+        "Zipper & button repair",
+        "Same-day alterations available"
+      ]
+    },
+    {
+      title: "WOMEN'S ALTERATIONS",
+      icon: "👗",
+      description: "Professional alterations for women with precision fitting.",
+      features: [
+        "Pants alterations (hemming, waist, length)",
+        "Skirt alterations (hemming, waist, length)",
+        "Dress alterations (hemming, fitting, sleeves)",
+        "Blouse alterations (sleeves, waist, length)",
+        "Jacket alterations (sleeves, shoulders, length)",
         "Zipper & button repair",
         "Same-day alterations available"
       ]
@@ -26,7 +43,7 @@ export default function Services() {
     {
       title: "CUSTOM SUITS",
       icon: "🎩",
-      description: "Bespoke suits tailored to perfection for the modern professional.",
+      description: "Bespoke suits tailored to perfection for men and women.",
       features: [
         "Custom suit tailoring (men & women)",
         "Business attire & formal wear",
@@ -65,17 +82,6 @@ export default function Services() {
         "Pattern making",
         "Fabric selection guidance",
         "Multiple fittings included"
-      ]
-    },
-    {
-      title: "REPAIRS & MENDING",
-      icon: "🪡",
-      description: "Quick fixes and repairs for damaged or worn clothing.",
-      features: [
-        "Patchwork and mending",
-        "Torn clothing repair",
-        "Button replacement",
-        "Hemming services"
       ]
     }
   ];
@@ -167,6 +173,8 @@ export default function Services() {
         </div>
       </section>
 
+
+
       {/* Call to Action */}
       <section className="py-20 bg-navy">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -204,6 +212,21 @@ const galleryImages = [
   "(Upload-from-mobile-1743185935)1000004333.webp",
   "(Upload-from-mobile-1743180789)1000004324.webp",
   "(Upload-from-mobile-1743088282)1000004223.webp",
+];
+
+const galleryImages4 = [
+  "z7.jpg",
+  "%28Upload-from-mobile-1743171272%291000004220.jpg_1.webp",
+  "%28Upload-from-mobile-1743175183%291000004218.jpg_1.webp",
+  "%28Upload-from-mobile-1743175284%291000004222.jpg_3.webp",
+  "%28Upload-from-mobile-1743175465%291000004216.jpg_6.webp",
+  "%28Upload-from-mobile-1743175569%291000004221.jpg.webp",
+  "%28Upload-from-mobile-1743175767%291000004225.jpg_1.webp",
+  "%28Upload-from-mobile-1743175868%291000004217.jpg_1.webp",
+  "%28Upload-from-mobile-1743176072%291000004213.jpg_3.webp",
+  "%28Upload-from-mobile-1743176174%291000004214.jpg_1.webp",
+  "%28Upload-from-mobile-1743186578%291000004328.jpg_3.webp",
+  "%28Upload-from-mobile-1743188119%291000004334.jpg_5.webp",
 ];
 
 function GalleryCarousel() {

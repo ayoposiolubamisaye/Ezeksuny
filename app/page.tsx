@@ -71,6 +71,11 @@ export default function Home() {
             OUR WORK
           </h2>
           <GalleryCarousel />
+          
+          {/* Second Carousel */}
+          <div className="mt-8">
+            <GalleryCarousel2 />
+          </div>
         </div>
       </section>
 
@@ -291,6 +296,26 @@ const galleryImages = [
   "473793529_575562372117947_432943533574415590_n.webp",
 ];
 
+const galleryImages3 = [
+  "z7-compressed.webp",
+  "z4-compressed.webp",
+  "(Upload-from-mobile-1743087522)1000004224-compressed.webp",
+  "(Upload-from-mobile-1743171272)1000004220-compressed.webp",
+  "(Upload-from-mobile-1743175183)1000004218-compressed.webp",
+  "(Upload-from-mobile-1743175284)1000004222-compressed.webp",
+  "(Upload-from-mobile-1743175465)1000004216-compressed.webp",
+  "(Upload-from-mobile-1743175569)1000004221-compressed.webp",
+  "(Upload-from-mobile-1743175868)1000004217-compressed.webp",
+  "(Upload-from-mobile-1743176072)1000004213-compressed.webp",
+  "(Upload-from-mobile-1743176174)1000004214-compressed.webp",
+  "(Upload-from-mobile-1743176311)1000004219-compressed.webp",
+  "(Upload-from-mobile-1743186240)1000004327-compressed.webp",
+  "(Upload-from-mobile-1743186578)1000004328(1)-compressed.webp",
+  "(Upload-from-mobile-1743187329)1000004325-compressed.webp",
+  "(Upload-from-mobile-1743187508)1000004330(1)-compressed.webp",
+  "(Upload-from-mobile-1743188328)1000004332-compressed.webp",
+];
+
 function GalleryCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'center' });
 
@@ -307,8 +332,34 @@ function GalleryCarousel() {
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container flex gap-6">
           {galleryImages.map((img, idx) => (
-            <div className="embla__slide min-w-[300px] max-w-[350px] h-[400px] rounded-lg overflow-hidden shadow-lg" key={img}>
-              <Image src={`/images/${img}`} alt={`Gallery image ${idx + 1}`} width={350} height={400} className="object-cover w-full h-full" loading="lazy" />
+            <div className="embla__slide min-w-[200px] max-w-[250px] h-[250px] rounded-lg overflow-hidden shadow-lg" key={img}>
+              <Image src={`/images/${img}`} alt={`Gallery image ${idx + 1}`} width={250} height={250} className="object-cover w-full h-full" loading="lazy" />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function GalleryCarousel2() {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'center' });
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    const interval = setInterval(() => {
+      if (emblaApi) emblaApi.scrollNext();
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [emblaApi]);
+
+  return (
+    <div className="embla overflow-hidden">
+      <div className="embla__viewport" ref={emblaRef}>
+        <div className="embla__container flex gap-6">
+          {galleryImages3.map((img, idx) => (
+            <div className="embla__slide min-w-[200px] max-w-[250px] h-[250px] rounded-lg overflow-hidden shadow-lg" key={img}>
+              <Image src={`/images3/${img}`} alt={`Gallery image ${idx + 1}`} width={250} height={250} className="object-cover w-full h-full" loading="lazy" />
             </div>
           ))}
         </div>
