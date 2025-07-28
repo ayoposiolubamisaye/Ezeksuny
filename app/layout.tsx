@@ -31,11 +31,11 @@ export const metadata: Metadata = {
   description: "Professional tailoring, cleaning, and alteration services in Baltimore, MD.",
   icons: {
     icon: [
-      { url: '/Logo-optimized.png', sizes: '32x32', type: 'image/png' },
-      { url: '/Logo-optimized.png', sizes: '16x16', type: 'image/png' },
+      { url: '/Logo-optimized.png?v=3', sizes: '32x32', type: 'image/png' },
+      { url: '/Logo-optimized.png?v=3', sizes: '16x16', type: 'image/png' },
     ],
-    shortcut: '/Logo-optimized.png',
-    apple: '/Logo-optimized.png',
+    shortcut: '/Logo-optimized.png?v=3',
+    apple: '/Logo-optimized.png?v=3',
   },
 };
 
@@ -50,10 +50,10 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Bitter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/Logo-optimized.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/Logo-optimized.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/Logo-optimized.png" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico?v=3" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/Logo-optimized.png?v=3" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/Logo-optimized.png?v=3" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/Logo-optimized.png?v=3" />
         <link rel="manifest" href="/manifest.json" />
       </head>
       <body className={`${fjallaOne.variable} ${bitter.variable} font-bitter`}>
