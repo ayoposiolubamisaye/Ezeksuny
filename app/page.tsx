@@ -212,7 +212,7 @@ export default function Home() {
               </a>
             </div>
             <div className="flex justify-center">
-              <Image src="/aboutpic-original.webp" alt="About EZEKSUNY" width={400} height={500} className="rounded-lg object-cover w-80 h-96 shadow-lg" />
+              <Image src="/aboutpic-compressed.webp" alt="About EZEKSUNY" width={400} height={500} className="rounded-lg object-cover w-80 h-96 shadow-lg" />
             </div>
           </div>
         </div>
