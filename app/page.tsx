@@ -9,9 +9,28 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image - Replace with your professional suit image */}
-        <div className="absolute inset-0 bg-gradient-to-r from-navy/90 to-navy/70">
-          <div className="absolute inset-0 bg-black/30"></div>
+        {/* Video Background */}
+        <div className="absolute inset-0 w-full h-full">
+          {/* Fallback background */}
+          <div className="absolute inset-0 bg-gradient-to-r from-navy/90 to-navy/70"></div>
+          
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            className="w-full h-full object-cover relative z-10"
+            onError={(e) => console.error('Video error:', e)}
+            onLoadStart={() => console.log('Video loading started')}
+            onCanPlay={() => console.log('Video can play')}
+          >
+            <source src="/video/0728(2).mp4" type="video/quicktime" />
+            <source src="/video/0728(2).mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          {/* Overlay for better text readability */}
+          <div className="absolute inset-0 bg-navy/40 z-20"></div>
         </div>
         
         {/* Hero Content */}
@@ -24,19 +43,19 @@ export default function Home() {
             </a>
           </div>
           <h1 className="font-title text-5xl md:text-7xl font-bold mb-6">
-            <span className="text-gold">EZEKSUNY</span>
+            <span className="text-gold drop-shadow-[0_2px_2px_rgba(0,0,0,1)]">EZEKSUNY</span>
             <br />
-            <span className="text-white">Tailoring & Cleaning </span>
+            <span className="text-white drop-shadow-[0_2px_2px_rgba(0,0,0,1)]">Tailoring & Cleaning </span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-200 mb-12 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-200 mb-12 max-w-2xl mx-auto drop-shadow-[0_2px_2px_rgba(0,0,0,1)]">
             Expert alterations, tailoring, and premium dry cleaning services in Baltimore, MD
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <a href="/services" className="border-2 border-gold text-white px-8 py-4 text-lg font-semibold hover:bg-gold hover:text-navy transition-all duration-300">
+            <a href="/services" className="border-2 border-gold text-white px-8 py-4 text-lg font-semibold hover:bg-gold hover:text-navy transition-all duration-300 drop-shadow-[0_2px_2px_rgba(0,0,0,1)]">
               VIEW SERVICES
             </a>
-            <a href="tel:6674350059" className="border-2 border-gold text-white px-8 py-4 text-lg font-semibold hover:bg-gold hover:text-navy transition-all duration-300">
-              INQUIRE TODAY!
+            <a href="tel:6674350059" className="border-2 border-gold text-white px-8 py-4 text-lg font-semibold hover:bg-gold hover:text-navy transition-all duration-300 drop-shadow-[0_2px_2px_rgba(0,0,0,1)]">
+              GIVE US A CALL
             </a>
           </div>
         </div>
@@ -223,7 +242,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="font-semibold text-white">Phone</p>
-                    <p className="text-gray-300">(667) 435-0059</p>
+                    <p className="text-gray-300">Give us a call</p>
                   </div>
                 </div>
                 <div className="flex items-center">

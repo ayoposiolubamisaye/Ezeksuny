@@ -1,7 +1,8 @@
 'use client';
 
 import Image from "next/image";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import useEmblaCarousel from 'embla-carousel-react';
 
 export default function Services() {
   const [openService, setOpenService] = useState<number | null>(null);
@@ -14,7 +15,6 @@ export default function Services() {
     {
       title: "ALTERATIONS",
       icon: "👔",
-      badge: "POPULAR",
       description: "Professional alterations for all types of garments with precision fitting.",
       features: [
         "Uniform tailoring (school, military, work)",
@@ -26,7 +26,6 @@ export default function Services() {
     {
       title: "CUSTOM SUITS",
       icon: "🎩",
-      badge: "PREMIUM",
       description: "Bespoke suits tailored to perfection for the modern professional.",
       features: [
         "Custom suit tailoring (men & women)",
@@ -38,7 +37,6 @@ export default function Services() {
     {
       title: "WEDDING DRESSES",
       icon: "👗",
-      badge: "SPECIAL",
       description: "Expert alterations for bridal gowns and bridesmaid dresses.",
       features: [
         "Bridal gown alterations",
@@ -50,7 +48,6 @@ export default function Services() {
     {
       title: "DRY CLEANING",
       icon: "🧺",
-      badge: "CARE",
       description: "Gentle cleaning for delicate and high-end garments.",
       features: [
         "Professional dry cleaning",
@@ -62,7 +59,6 @@ export default function Services() {
     {
       title: "CUSTOM CLOTHING",
       icon: "✂️",
-      badge: "BESPOKE",
       description: "Create garments from scratch with custom design services.",
       features: [
         "Custom clothing design",
@@ -74,7 +70,6 @@ export default function Services() {
     {
       title: "REPAIRS & MENDING",
       icon: "🪡",
-      badge: "FAST",
       description: "Quick fixes and repairs for damaged or worn clothing.",
       features: [
         "Patchwork and mending",
@@ -102,7 +97,7 @@ export default function Services() {
             Quality craftsmanship meets convenience.
           </p>
           <a href="tel:6674350059" className="bg-gold text-navy px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white transition-all duration-300 inline-block">
-            Call (667) 435-0059
+            Give us a call
           </a>
         </div>
       </section>
@@ -114,55 +109,56 @@ export default function Services() {
             <h2 className="font-title text-4xl font-bold mb-6">
               <span className="gradient-text">TAILORING SERVICES</span>
             </h2>
+            
+            {/* Gallery Carousel */}
+            <div className="mb-16">
+              <h3 className="font-title text-2xl font-bold mb-8 text-white">
+            
+              </h3>
+              <GalleryCarousel />
+            </div>
+            
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">
               From quick alterations to bespoke creations, we deliver exceptional craftsmanship 
               with attention to every detail. Your perfect fit is our priority.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-navy-light rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+              <div key={index} className="bg-navy border-2 border-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 {/* Service Header - Always Visible */}
                 <div 
-                  className="p-6 cursor-pointer"
+                  className="p-8 cursor-pointer"
                   onClick={() => toggleService(index)}
                 >
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center">
-                      <div className="w-12 h-12 bg-white text-navy rounded-lg flex items-center justify-center mr-4">
-                        <span className="text-xl">{service.icon}</span>
-                      </div>
-                      <div>
-                        <h3 className="font-title text-xl font-semibold text-white">{service.title}</h3>
-                        <p className="text-blue-100 text-sm mt-1">{service.description}</p>
-                      </div>
+                  <div className="text-center mb-6">
+                    <div className="w-16 h-16 bg-white text-navy rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-2xl">{service.icon}</span>
                     </div>
-                    <div className="flex items-center gap-3">
-                      <span className="bg-gold text-navy px-3 py-1 rounded-full text-xs font-bold">
-                        {service.badge}
-                      </span>
-                      <div className={`w-6 h-6 transition-transform duration-300 ${openService === index ? 'rotate-180' : ''}`}>
-                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                        </svg>
-                      </div>
+                    <h3 className="font-title text-2xl font-bold text-white mb-3">{service.title}</h3>
+                    <p className="text-blue-100 text-sm leading-relaxed">{service.description}</p>
+                  </div>
+                  <div className="flex justify-center">
+                    <div className={`w-8 h-8 transition-transform duration-300 ${openService === index ? 'rotate-180' : ''}`}>
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
                     </div>
                   </div>
                 </div>
 
                 {/* Dropdown Content */}
                 <div className={`overflow-hidden transition-all duration-300 ${openService === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
-                  <div className="px-6 pb-6 border-t border-navy/30">
-                    <ul className="text-blue-100 space-y-3 mt-4">
+                  <div className="px-8 pb-8 border-t border-navy-light">
+                    <ul className="text-blue-100 space-y-4 mt-6">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-start">
-                          <span className="text-gold mr-3 mt-0.5">✓</span>
-                          <span>{feature}</span>
+                          <span className="text-gold mr-3 mt-1 text-lg">✓</span>
+                          <span className="text-sm leading-relaxed">{feature}</span>
                         </li>
                       ))}
                     </ul>
-
                   </div>
                 </div>
               </div>
@@ -182,7 +178,7 @@ export default function Services() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:6674350059" className="bg-gold text-navy px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white transition-all duration-300">
-              Call (667) 435-0059
+              Give us a call
             </a>
             <a href="/" className="border-2 border-gold text-gold px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gold hover:text-navy transition-all duration-300">
               Back to Home
@@ -191,5 +187,56 @@ export default function Services() {
         </div>
       </section>
     </>
+  );
+}
+
+const galleryImages = [
+  "z4.webp",
+  "(Upload-from-mobile-1743186240)1000004327.webp",
+  "(Upload-from-mobile-1743186117)1000004329.webp",
+  "(Upload-from-mobile-1743185935)1000004333.webp",
+  "(Upload-from-mobile-1743180789)1000004324.webp",
+  "(Upload-from-mobile-1743088282)1000004223.webp",
+  // Duplicate images for better looping
+  "z4.webp",
+  "(Upload-from-mobile-1743186240)1000004327.webp",
+  "(Upload-from-mobile-1743186117)1000004329.webp",
+  "(Upload-from-mobile-1743185935)1000004333.webp",
+  "(Upload-from-mobile-1743180789)1000004324.webp",
+  "(Upload-from-mobile-1743088282)1000004223.webp",
+];
+
+function GalleryCarousel() {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    loop: true, 
+    align: 'start',
+    skipSnaps: false,
+    dragFree: false
+  });
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    
+    const interval = setInterval(() => {
+      if (emblaApi) {
+        emblaApi.scrollNext();
+      }
+    }, 1500);
+    
+    return () => clearInterval(interval);
+  }, [emblaApi]);
+
+  return (
+    <div className="embla overflow-hidden">
+      <div className="embla__viewport" ref={emblaRef}>
+        <div className="embla__container flex gap-4">
+          {galleryImages.map((img, idx) => (
+            <div className="embla__slide min-w-[200px] max-w-[250px] h-[250px] rounded-lg overflow-hidden shadow-lg" key={`${img}-${idx}`}>
+              <Image src={`/images2/${img}`} alt={`Gallery image ${idx + 1}`} width={250} height={250} className="object-cover w-full h-full" />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 } 
