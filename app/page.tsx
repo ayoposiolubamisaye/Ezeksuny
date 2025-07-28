@@ -302,7 +302,7 @@ const galleryImages3 = [
   "(Upload-from-mobile-1743087522)1000004224-compressed.webp",
   "(Upload-from-mobile-1743171272)1000004220-compressed.webp",
   "(Upload-from-mobile-1743175183)1000004218-compressed.webp",
-  "(Upload-from-mobile-1743175284)1000004222-compressed.webp",
+
   "(Upload-from-mobile-1743175465)1000004216-compressed.webp",
   "(Upload-from-mobile-1743175569)1000004221-compressed.webp",
   "(Upload-from-mobile-1743175868)1000004217-compressed.webp",

@@ -205,6 +205,7 @@ const galleryImages = [
   "(Upload-from-mobile-1743185935)1000004333.webp",
   "(Upload-from-mobile-1743180789)1000004324.webp",
   "(Upload-from-mobile-1743088282)1000004223.webp",
+  "(Upload-from-mobile-1743175284)1000004222.webp",
   // Duplicate images for better looping
   "z4.webp",
   "(Upload-from-mobile-1743186240)1000004327.webp",
@@ -212,6 +213,7 @@ const galleryImages = [
   "(Upload-from-mobile-1743185935)1000004333.webp",
   "(Upload-from-mobile-1743180789)1000004324.webp",
   "(Upload-from-mobile-1743088282)1000004223.webp",
+  "(Upload-from-mobile-1743175284)1000004222.webp",
 ];
 
 const galleryImages4 = [
